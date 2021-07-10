@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu&display=swap" rel="stylesheet" type='text/css'>
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='templatemo-style.css') }}">
+		<style>
+		html { width: 100%; height:100%; overflow:hidden; }
+		body {
+		background-image: url('../static/pic4.jpg');
+
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		width: 99%;
+		height:95%;
+		font-family: 'Ubuntu', sans-serif;
+		text-align:center;
+		color: #fff;
+		font-size: 20px;
+
+		letter-spacing:1.2px;
+
+
+			overflow : auto;
+		}
+		h1{
+		color: #fff;
+		font-weight: bold;
+		font-size: 3.5rem;
+		font-family: 'Montserrat', sans-serif;
+		text-align:center;
+		}
+		p{
+		color: #fff;
+		font-size: 1.5rem;
+		font-family: 'Ubuntu', sans-serif;
+		text-align:center;
+		}
+		#texarea{
+			font-family: 'Ubuntu',sans-serif;
+			opacity: 0.6;
+
+			/* color: #000000; */
+		}
+
+		#tex-num{
+			width: 350px;
+		height: 25px;
+		font-size: 1rem;
+		}
+		.ml-container{
+			overflow: auto;
+				padding-bottom: 150px;
+		}
+
+	.container{
+		width: 100%;
+	}
+	#org-text{
+				font-family: 'Ubuntu',sans-serif;
+				font-size: 1rem;
+	}
+	#button-sub{
+		height: 30px;
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+		</style>
+</head>
+<body>
+<div class="summarizer">
+	<header>
+		<div class="container">
+    		<h1>Text summarization</h1>
+    	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('summarize')}}" method="POST">
+    		<p>Enter the text here</p>
+				<div id="texarea">
+    		<textarea name="originalText" id="org-text" rows="10" cols="120" required></textarea>
+			</div>
+    		<br/>
+				<!-- <div id="summ-inp"> -->
+    		<p>Enter the number of lines in summary</p>
+
+				<div id=texarea>
+    		<input name="numOfLines" id="tex-num" type="text"></input>
+    		<input type="submit" id="button-sub" class="btn-info" value="Summarize">
+				</div>
+
+		  <!-- </div> -->
+    	</form>
+
+	</div>
+</div>
+</body>
+</html>
