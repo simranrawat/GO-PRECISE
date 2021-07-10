@@ -10,7 +10,7 @@ You must have following python libraries installed on your machine. Please refer
 - Flask (for creating web application)
 - NLTK (for natural language processing)
 - Networkx (for using graph based algorithms)
-- 
+
 # Running the Project
 1. Open Anaconda command prompt and move to your project home directory.
 2. Run app.py using below command to start Flask API:
